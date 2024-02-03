@@ -33,7 +33,6 @@ No Human: 471
 Uber Eats: 612 (After saving the augmented images)
 
 ---------------------------------------------------------------------------------------------------------------------------
-
 ## Cloud (AWS, Sagemaker)
 
 ### S3 Bucket:
@@ -43,7 +42,18 @@ Data has been stored into S3 buckets and fetched during model training, and once
 ### EC2:
 A t2.medium instance has been used to deploy the app, which runs the Streamlit WebApp and performs image classification using the locally saved model.
 
-
 ### Sagmaker:
 A model endpoint has been created for the inference using AWS sagemaker (Not used in running code, because of its cost). Current inference is happening by the locally saved model.
+
+----------------------------------------------------------------------------------------------------------------------------
+## Limitations:
+
+### Webcam image capture:
+It has the code and a scheduler to capture an image every 10 seconds, but it is able to capture only on the host system (if it has a webcam), but if the user is using Webapp on some other system (other than host), it won’t be able to capture it. To solve this issue we need to create a Webapp client using some frontend libraries, like javascript etc.
+
+### Speed and Latency: 
+The application will take some time to load up the screen, and also for the first classification request it will be a bit slow (because of model loading), but for subsequent requests it will be fine.
+
+### Security:
+Current Webapp is running on HTTP, so if you are not able to open it, try using HTTP only not HTTPS. 
 

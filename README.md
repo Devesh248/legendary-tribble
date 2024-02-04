@@ -9,6 +9,7 @@ The Codebase is divided into following categories,
 ### Experiment Notebooks: 
 This section contains notebooks with different model architecture like Basic CCN and Transfer Learning using VGG16. These notebooks also contain model architecture, different hyperparameters, accuracy and loss 
 related graphs and confusion matrix related reports.
+It also has a Sagemaker notebook, that shows how we can deploy model for inference using sagemaker endpoint, and make predictions using that endpoint
 
 ### Src: 
 It contains all the functions and classes related to data processing, model training and predictions.

@@ -41,7 +41,7 @@ Data has been stored into S3 buckets and fetched during model training, and once
 
 
 ### EC2:
-A t2.medium instance has been used to deploy the app, which runs the Streamlit WebApp and performs image classification using the locally saved model.
+A t2.xlarge instance has been used to deploy the app, which runs the Streamlit WebApp and performs image classification using the locally saved model.
 
 ### Sagmaker:
 A model endpoint has been created for the inference using AWS sagemaker (Not used in running code, because of its cost). Current inference is happening by the locally saved model.
